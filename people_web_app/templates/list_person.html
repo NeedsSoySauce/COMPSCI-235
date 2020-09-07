@@ -3,9 +3,9 @@
 {% block content %}
 
 <main>
-    {% if person == none %}
+    {% if person is none %}
         <p>No matching person</p>
-    (% else %}
+    {% else %}
         <table>
             <tr>
                 <th>Id number</th>
