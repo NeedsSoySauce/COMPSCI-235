@@ -21,12 +21,12 @@ def home():
 
 @people_blueprint.route('/list')
 def list_people():
-    pass
+    return render_template('list_people.html',
+                           people=repo.repo_instance,
+                           find_person_url=url_for('people_bp.find_person'),
+                           list_people_url=url_for('people_bp.list_people'))
 
 
 @people_blueprint.route('/find', methods=['GET', 'POST'])
 def find_person():
     pass
-
-
-
